@@ -4,7 +4,7 @@ export default function FormControl({formId, labelText, inputType='number'}) {
 	
 		<div className="input-group">
 			<label htmlFor={formId}>{labelText}</label>
-			<input id={formId} type={inputType} />
+			<input id={formId} type={inputType} required />
 		</div>
 
 	)

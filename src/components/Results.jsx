@@ -1,8 +1,12 @@
-export default function Results() {
+import { calculateInvestmentResults } from "../util/investment"
+
+export default function Results({ input}) {
 	
+	const results = calculateInvestmentResults(input);
+
 	return (
-		<section className="results">
-			<table className="result">
+		<section className="data-results">
+			<table className="results">
 				<thead>
 					<tr>
 						<th>Year</th>
@@ -14,6 +18,17 @@ export default function Results() {
 				</thead>
 
 				<tbody>
+					{
+						results.map(itm => {
+							return (<tr>
+								<td>{itm.year}</td>
+								<td>{itm.interest}</td>
+								<td>{itm.valueEndOfYear}</td>
+								<td>{itm.annualInvestment}</td>
+								<td>n'stuff</td>
+							</tr>);
+						})
+					}
 					<tr>
 						<td>lipsum</td>
 						<td>dolor</td>
@@ -21,13 +36,7 @@ export default function Results() {
 						<td>amet</td>
 						<td>n'stuff</td>
 					</tr>
-					<tr>
-						<td>lipsum</td>
-						<td>dolor</td>
-						<td>sit</td>
-						<td>amet</td>
-						<td>n'stuff</td>
-					</tr>
+					
 				</tbody>
 			</table>
 
