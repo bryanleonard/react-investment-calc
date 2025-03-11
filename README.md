@@ -9,7 +9,7 @@ then
 
 `npm run dev`
 
-View demo at [https://bryanleonard.github.io/react-investment-calc](https://bryanleonard.github.io/react-investment-calc)
+<!-- View demo at [https://bryanleonard.github.io/react-investment-calc](https://bryanleonard.github.io/react-investment-calc) -->
 
 ----------------
 
