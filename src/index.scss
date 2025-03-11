@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
@@ -13,6 +18,8 @@ body {
   background: radial-gradient($dark-bg-inner, $dark-bg-outer);
   color: $text-primary;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -41,11 +48,17 @@ body {
   }
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .user-input {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem; // Adjust spacing between input groups
-
   padding: 2rem; 
   max-width: 30rem;
   margin: 2rem auto;
@@ -82,7 +95,7 @@ input {
 
 .results {
   max-width: 50rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem;
   text-align: right;
   table-layout: fixed;
@@ -115,4 +128,15 @@ input {
 
 .center {
   text-align: center;
+}
+
+.footer {
+  margin-top: auto;
+	text-align: center;
+	padding: .75rem 2rem;
+	font-size: 0.8rem;
+
+	p {
+		margin: 0 auto;
+	}
 }

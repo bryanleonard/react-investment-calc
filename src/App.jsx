@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from "./components/Header";
 import UserInputs from './components/UserInputs';
 import Results from './components/Results';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -24,11 +25,12 @@ function App() {
 	};
 
   return (
-    <main>
-      <Header />
-      <UserInputs input={userInput} onChangeInput={handleChange} />
-      {inputIsValid && <Results input={userInput} /> }
-      {!inputIsValid &&  <p className="center">Please enter a duration greater than zero.</p> }
+    <main className="main">
+			<Header />
+			<UserInputs input={userInput} onChangeInput={handleChange} />
+			{inputIsValid && <Results input={userInput} /> }
+			{!inputIsValid &&  <p className="center">Please enter a duration greater than zero.</p> }
+			<Footer />
     </main>
   )
 }
